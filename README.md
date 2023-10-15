@@ -1,2 +1,2 @@
 # GMOMG
-チームでソフトウェアの何かをつくる
+website HUD design
