@@ -1,0 +1,273 @@
+body{
+    background-color: #000;
+  }
+  
+  .animation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 400px;
+    height: 600px;
+    margin: 10% 35%;
+    border: 2px solid #999;
+  }
+  
+  .backgroundLight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 390px;
+    height: 590px;
+    background: #101010;
+  }
+  
+  .square{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #666;
+  }
+  
+  .centerCircle{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    background-color: #111;
+  }
+  
+  /*** Cross ***/
+  
+  .cross1{
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background-color: #fff;
+    transform: rotate(45deg);
+  }
+  
+  .cross2{
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+  }
+  
+  /*** Gradient circle ***/
+  
+  .circleGradient{
+    background: radial-gradient(#444, #222, #111, transparent);
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 60px;
+  }
+  
+  /*** Satellites circles ***/
+  
+  .satelliteCircle1{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    border-radius: 120px;
+    border: 2px solid #333;
+    animation: satellite1 5s infinite linear;
+  }
+    .satelliteCircle1:before{
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      background-color: #fff;
+      position: absolute;
+      left: 10px;
+      top: -18px;
+    }
+  
+  .satelliteCircle2{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #333;
+    animation: satellite2 12s infinite linear;
+  }
+    .satelliteCircle2:before{
+      content: "";
+      width: 15px;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      margin: 12px 0 0 5px;
+    }
+    .satelliteCircle2:after{
+      content: "";
+      width: 15px;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      margin: 12px 0 0 5px;
+      transform: rotate(95deg);
+    }
+  
+
+  .satelliteTriangle {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border: 2px solid #fffff0;
+    animation: satelliteTriangle 12s infinite linear;
+  }
+    .satelliteTriangle:before{
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
+      position: absolute;
+    }
+   /* 
+  .satelliteRectangles{
+    position: absolute;
+      border-right: 20px solid #555;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      height: 25px;
+      width: 0;
+    border-radius: 0 80% 80% 0;
+    animation: satelliteRects 6s infinite linear;
+  }
+  
+    .satelliteRectangles:after{
+      content: "";
+      width: 15px;
+      height: 60px;
+      border-radius: 50%;
+      position: absolute;
+      background: #111;
+      top: -10px;
+      left: -7px;
+      transform: rotate(4deg);
+    }
+  
+  .circle1{
+    width: 145px;
+    height: 145px;
+    position: absolute;
+    border-radius: 120px;
+    border: 2px solid #222;
+    animation: turnOverAndOverRight 2s infinite linear;
+  }
+  
+  .circle2 {
+    position: absolute;
+    border: 4px solid #fff;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-radius: 150px;
+    width: 143px;
+    height: 143px;
+    animation: turnOverAndOverRight 2s infinite linear;
+  }
+  
+  .bigCircle{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    border-radius: 50%;
+    border: 20px solid #222;
+  }
+  */
+  /*** dashed circles ***/
+  
+  /*
+  .dashCircle1{
+    position: absolute;
+    width: 188px;
+    height: 188px;
+    border-radius: 50%;
+    border: 2px dashed #333;
+    animation: turnOverAndOverRight 8s infinite linear;
+  }
+  
+  .dashCircle2{
+    position: absolute;
+    width: 198px;
+    height: 198px;
+    border-radius: 50%;
+    border: 2px dashed #333;
+    animation: turnOverAndOverLeft 8s infinite linear;
+  }
+  
+  .dashCircle3{
+    position: absolute;
+    width: 208px;
+    height: 208px;
+    border-radius: 50%;
+    border: 2px dashed #333;
+    animation: turnOverAndOverRight 10s infinite linear;
+  }
+  
+  .thinCircle{
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    border-radius: 190px;
+    border: 2px solid #666;
+  }
+  */
+
+  @keyframes turnOverAndOverRight {
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(-360deg);
+    }
+  }
+  
+  @keyframes turnOverAndOverLeft {
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes satellite1 {
+      from {-webkit-transform: rotateZ(0deg) translateX(160px) rotate(0deg)}
+      to {-webkit-transform: rotateZ(-360deg) translateX(160px) rotate(-360deg)}
+  }
+  
+  @keyframes satellite2 {
+      from {-webkit-transform: rotateZ(0deg) translateX(160px)}
+      to {-webkit-transform: rotateZ(360deg) translateX(160px)}
+  }
+  
+  
+  @keyframes satelliteRects {
+      from {-webkit-transform: rotateZ(0deg) translateX(120px)}
+      to {-webkit-transform: rotateZ(360deg) translateX(120px)}
+  }
+
+  @keyframes satelliteTriangle {
+    0% {
+      top: 0;
+      left: 0;
+    }
+    30% {
+      top: 50px;
+    }
+    68%,
+    72% {
+      left: 50px;
+    }
+    100% {
+      top: 100px;
+      left: 100%;
+    }
+  }
